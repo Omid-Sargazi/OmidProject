@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Library</OutputType>
+		<TargetFramework>net9.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.1" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="9.0.1" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.1.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.1" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="7.2.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="7.2.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore.Newtonsoft" Version="7.2.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\0-Frameworks\OmidProject.Frameworks.Contracts\OmidProject.Frameworks.Contracts.csproj" />
+		<ProjectReference Include="..\..\2-Applications\OmidProject.Applications.Application\OmidProject.Applications.Application.csproj" />
+		<ProjectReference Include="..\..\2-Applications\OmidProject.Applications.Contracts\OmidProject.Applications.Contracts.csproj" />
+		<ProjectReference Include="..\..\3-Messaging\OmidProject.Messaging.Configurations\OmidProject.Messaging.Configurations.csproj" />
+		<ProjectReference Include="..\..\3-Messaging\OmidProject.Messaging.Consumers\OmidProject.Messaging.Consumers.csproj" />
+		<ProjectReference Include="..\..\3-Messaging\OmidProject.Messaging.Producers\OmidProject.Messaging.Producers.csproj" />
+		<ProjectReference Include="..\OmidProject.Infrastructures.ACL\OmidProject.Infrastructures.ACL.csproj" />
+		<ProjectReference Include="..\OmidProject.Infrastructures.CommandDB\OmidProject.Infrastructures.CommandDb.csproj" />
+		<ProjectReference Include="..\OmidProject.Infrastructures.Settings\OmidProject.Infrastructures.Settings.csproj" />
+	</ItemGroup>
+
+</Project>

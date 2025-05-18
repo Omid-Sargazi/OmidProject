@@ -1,0 +1,4 @@
+# مسیر جستجو را تنظیم کنید (مثال: $path = "C:\Projects")
+PowerShell:
+Set-ExecutionPolicy RemoteSigned -Scope Process -Force
+.\rename.ps1

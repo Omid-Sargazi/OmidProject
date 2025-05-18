@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Library</OutputType>
+		<TargetFramework>net9.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\0-Frameworks\OmidProject.Frameworks.Contracts\OmidProject.Frameworks.Contracts.csproj" />
+		<ProjectReference Include="..\..\1-Domains\OmidProject.Domains.Domain\OmidProject.Domains.Domain.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="AuthenticationContracts\Queries\" />
+	  <Folder Include="CityContracts\Commands\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+	</ItemGroup>
+
+</Project>

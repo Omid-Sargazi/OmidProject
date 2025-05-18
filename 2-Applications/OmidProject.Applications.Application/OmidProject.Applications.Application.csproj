@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Library</OutputType>
+		<TargetFramework>net9.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="ClosedXML" Version="0.104.2" />
+		<PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.3.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="9.0.1" />
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.3.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\0-Frameworks\OmidProject.Frameworks.Contracts\OmidProject.Frameworks.Contracts.csproj" />
+		<ProjectReference Include="..\..\1-Domains\OmidProject.Domains.Domain\OmidProject.Domains.Domain.csproj" />
+		<ProjectReference Include="..\..\4-Infrastructures\OmidProject.Infrastructures.Settings\OmidProject.Infrastructures.Settings.csproj" />
+		<ProjectReference Include="..\..\3-Messaging\OmidProject.Messaging.Producers\OmidProject.Messaging.Producers.csproj" />
+		<ProjectReference Include="..\OmidProject.Applications.Contracts\OmidProject.Applications.Contracts.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="AuthenticationHandlers\QueryHandlers\" />
+	  <Folder Include="General\" />
+	  <Folder Include="UserManagerHandlers\QueryHandlers\" />
+	</ItemGroup>
+
+</Project>

@@ -1,0 +1,136 @@
+﻿{
+  "defaultData": {
+    "Roles": [
+      {
+        "Name": "Admin",
+        "IsDefault": "false",
+        "IsSystemRole": "true"
+      },
+      {
+        "Name": "Applicant",
+        "IsDefault": "true",
+        "IsSystemRole": "true"
+      },
+      {
+        "Name": "Employer",
+        "IsDefault": "false",
+        "IsSystemRole": "true"
+      },
+      {
+        "Name": "Job",
+        "IsDefault": "false",
+        "IsSystemRole": "true"
+      }
+    ],
+
+    //"Users": [
+    //  {
+    //    "Id": "4dd7d5ca-c1d3-483b-b1b8-6d77775ac103",
+    //    "Firstname": "admin",
+    //    "Lastname": "admin",
+    //    "NationalCode": "123456",
+    //    "Role": "Admin"
+    //  },
+    //  {
+    //    "Id": "97467542-EDD8-430E-86E9-06B02D8FAEF1",
+    //    "Firstname": "job",
+    //    "Lastname": "job",
+    //    "NationalCode": "1234567",
+    //    "Role": "Job"
+    //  }
+    //],
+
+    "ApplicantDomain": [
+      {
+        "DomainAddress": "google.com",
+        "BusinessType": "1",
+        "EnamadState": "1",
+        "CityId": "1",
+        "c": ""
+      },
+      {
+        "DomainAddress": "gmail.com",
+        "BusinessType": "1",
+        "EnamadState": "1",
+        "CityId": "1",
+        "OwnerId": ""
+      }
+    ],
+
+    "LicenseInspectorOrganizations": [
+      {
+        "Name": "مرکز امور اصناف و بازرگانان-اتاق اصناف ایران-اتحادیه کشوری کسب‌وکارهای مجازی"
+      },
+      {
+        "Name": "مرکز امور اصناف و بازرگانان"
+      },
+      {
+        "Name": "وزارت آموزش و پرورش"
+      },
+      {
+        "Name": "سازمان راهداری و حمل‌ونقل جاده‌ای"
+      }
+    ],
+
+    "LicenseLegalDocumentations": [
+      {
+        "Name": "قانون نظام صنفی"
+      },
+      {
+        "Name": "دستورالعمل اجرایی آیین‌نامه حمل‌و نقل دانش‌آموزان مدارس"
+      }
+    ],
+
+    "LicenseTypes": [
+      {
+        "Name": "پروانه کسب مجازی"
+      },
+      {
+        "Name": "پروانه کسب فیزیکی"
+      },
+      {
+        "Name": "قرارداد"
+      }
+    ],
+
+    "LicensorOrganizations": [
+      {
+        "Name": "اتحادیه مربوطه"
+      },
+      {
+        "Name": "وزارت آموزش و پرورش"
+      }
+    ],
+
+    "ProductServiceGroups": [
+      {
+        "Name": "خدمات حمل‌ونقل و انبارداری"
+      },
+      {
+        "Name": "خدمات پولی و مالی، مشاوره املاک و کرایه کالا"
+      }
+    ],
+
+    "ProductServiceSubGroups": [
+      {
+        "Name": "انبارداری مایعات و گازها (مخزن)",
+        "ProductServiceGroupId": "1"
+      },
+      {
+        "Name": "خدمات پولی",
+        "ProductServiceGroupId": "2"
+      }
+    ],
+
+    "ProductServices": [
+      {
+        "Name": "حمل‌ونقل زمینی مسافر درون شهری- هوشمند",
+        "ProductServiceSubGroupId": "1"
+      },
+      {
+        "Name": "حمل‌ونقل زمینی مسافر درون شهری- سواری و ون",
+        "ProductServiceSubGroupId": "2"
+      }
+    ]
+  }
+}
