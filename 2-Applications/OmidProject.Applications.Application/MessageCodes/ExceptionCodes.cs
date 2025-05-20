@@ -40,6 +40,8 @@ public class ExceptionCodes
     {
         public static ApplicationExceptionMessageCode ProvinceNameIsNullOrEmpty = 1200;
         public static ApplicationExceptionMessageCode ProvinceNameIsExist = 1201;
+        public static ApplicationExceptionMessageCode ProvinceNotExist = 1202;
+        public static ApplicationExceptionMessageCode ProvinceIdIsGreaterThan = 1203;
     }
 
 

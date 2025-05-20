@@ -12,3 +12,12 @@ public sealed class ProvinceNameIsExistException : BusinessException
 
     public override string Message => "نام استان تکراری می باشد!";
 }
+public sealed class ProvinceIdIsGreaterThan : BusinessException
+{
+    public ProvinceIdIsGreaterThan()
+        : base(ExceptionCodes.ProvinceException.ProvinceNameIsExist)
+    {
+    }
+
+    public override string Message => "آیدی استان نمیتواند بزرگتر از 33 باشد.!";
+}

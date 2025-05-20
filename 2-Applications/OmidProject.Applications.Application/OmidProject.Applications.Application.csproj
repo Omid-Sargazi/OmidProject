@@ -24,6 +24,7 @@
 
 	<ItemGroup>
 	  <Folder Include="AuthenticationHandlers\QueryHandlers\" />
+	  <Folder Include="CityHandlers\CommandHandlers\Exceptions\" />
 	  <Folder Include="General\" />
 	  <Folder Include="UserManagerHandlers\QueryHandlers\" />
 	</ItemGroup>

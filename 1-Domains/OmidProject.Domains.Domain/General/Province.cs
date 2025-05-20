@@ -12,4 +12,9 @@ public class Province : Entity<int>
     }
     public string Name { get; protected set; }
     public List<City> Cities { get; set; }
+
+    public void Update(string name)
+    {
+        Name = name;
+    }
 }

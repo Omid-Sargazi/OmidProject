@@ -21,9 +21,9 @@ public class ProvinceService : IProvinceService
     {
         var result = province.MapTo<ProvinceFullDto>();
 
-        result.CitiesCount = province.Cities != null ? province.Cities.Count() : 0;
+        //result.CitiesCount = province.Cities != null ? province.Cities.Count() : 0;
         result.ShamsiCreatedAt = province.CreatedAt.ToPersianDateTime();
-        result.Cities = province.Cities != null ? _cityService.ConvertTo(province.Cities) : new List<CityDto>();
+        //result.Cities = province.Cities != null ? _cityService.ConvertTo(province.Cities) : new List<CityDto>();
 
         return result;
     }

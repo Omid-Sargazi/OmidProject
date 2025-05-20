@@ -14,7 +14,6 @@
 
 	<ItemGroup>
 	  <Folder Include="AuthenticationContracts\Queries\" />
-	  <Folder Include="CityContracts\Commands\" />
 	</ItemGroup>
 
 	<ItemGroup>

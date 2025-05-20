@@ -26,6 +26,25 @@ public class ProvinceController : MainController
         return OkApiResult(result);
     }
 
+    [HttpPost("update-province")]
+    public async Task<IActionResult> UpdateProvince(UpdateProvinceCommand command, CancellationToken cancellationToken)
+    {
+        var result =
+            await Distributor.PushCommand<UpdateProvinceCommand, UpdateProvinceCommandResponse>(command,
+                cancellationToken);
+
+        return OkApiResult(result);
+    }
+
+    [HttpPost("delete-province")]
+    public async Task<IActionResult> DeleteProvince(DeleteProvinceCommand command, CancellationToken cancellationToken)
+    {
+        var result =
+            await Distributor.PushCommand<DeleteProvinceCommand, DeleteProvinceCommandResponse>(command,
+                cancellationToken);
+        return OkApiResult(result);
+    }
+
     [HttpGet("get-province")]
     public async Task<IActionResult> GetProvince([FromQuery] GetProvinceQuery query,
         CancellationToken cancellationToken)
