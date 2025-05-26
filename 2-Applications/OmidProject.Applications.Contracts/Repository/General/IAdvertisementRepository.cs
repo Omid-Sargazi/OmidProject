@@ -19,6 +19,6 @@ namespace OmidProject.Applications.Contracts.Repository.General
         Advertisement GetById(int id);
         Task<Advertisement> GetByIdAsync(int id);
         List<Advertisement> GetAll();
-        Task<List<Advertisement>> GetAllAsync();
+        Task<List<Advertisement>> GetAllAsync(bool hasInclud = false);
     }
 }

@@ -1,23 +1,38 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using OmidProject.Frameworks.Contracts.Abstracts.EntityAbstract;
+﻿using OmidProject.Frameworks.Contracts.Abstracts.EntityAbstract;
 
-namespace OmidProject.Domains.Domain.General
+namespace OmidProject.Domains.Domain.General;
+
+public class Advertisement : Entity<int>
 {
-    public class Advertisement : Entity<int>
+    public Advertisement(string title, string description, string phoneNumber, decimal price, int districtId,
+        int categoryId)
     {
-        public string Title { get; set; }
-        public string Description { get; set; }
-        public string PhoneNumber { get; set; }
-        public decimal Price { get; set; }
-        public int DistrictId { get; set; }
-        public District District { get; set; }
-        public int CategoryId { get; set; }
-        public Category Category { get; set; }
-        public List<AdvertisementImage> AdvertisementImages { get; set; }
-        
+        Title = title;
+        Description = description;
+        PhoneNumber = phoneNumber;
+        Price = price;
+        DistrictId = districtId;
+        CategoryId = categoryId;
+    }
+
+    public string Title { get; protected set; }
+    public string Description { get; protected set; }
+    public string PhoneNumber { get; protected set; }
+    public decimal Price { get; protected set; }
+    public int DistrictId { get; protected set; }
+    public District District { get; set; } //navigational property
+    public int CategoryId { get; protected set; }
+    public Category Category { get; set; } //navigational property
+    public List<AdvertisementImage> AdvertisementImages { get; set; }
+
+    public void Update(string title, string description, string phoneNumber, decimal price, int districtId,
+        int categoryId)
+    {
+        Title = title;
+        Description = description;
+        PhoneNumber = phoneNumber;
+        Price = price;
+        DistrictId = districtId;
+        CategoryId = categoryId;
     }
 }

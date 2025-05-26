@@ -8,6 +8,10 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <Compile Remove="CityHandlers\CommandHandlers\Exceptions\CityNotExistException.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="ClosedXML" Version="0.104.2" />
 		<PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.3.0" />
 		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="9.0.1" />
@@ -23,10 +27,14 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Folder Include="AdvertisementHandlers\CommandHandlers\Exceptions\" />
 	  <Folder Include="AuthenticationHandlers\QueryHandlers\" />
-	  <Folder Include="CityHandlers\CommandHandlers\Exceptions\" />
 	  <Folder Include="General\" />
 	  <Folder Include="UserManagerHandlers\QueryHandlers\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="CityHandlers\CommandHandlers\Exceptions\CityNotExistException.cs" />
 	</ItemGroup>
 
 </Project>

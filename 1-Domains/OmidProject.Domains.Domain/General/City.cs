@@ -16,6 +16,7 @@ public class City : Entity<int>
     public List<District> Districts { get; set; }
 
     public void Update(string name, int provinceId)
+    
     {
         Name = name;
         ProvinceId = provinceId;

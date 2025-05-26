@@ -66,9 +66,16 @@ namespace OmidProject.Infrastructures.CommandDb.Repository
             return result;
         }
 
-        public async Task<List<Advertisement>> GetAllAsync()
+        public async Task<List<Advertisement>> GetAllAsync(bool hasInclud = false)
         {
-            var result = await _Db.Advertisements.ToListAsync();
+            var query = _Db.Advertisements.AsQueryable();
+
+            if (hasInclud)
+                query = query
+                    .Include(x => x.Category)
+                    .Include(x => x.District);
+
+            var result = await query.ToListAsync();
             return result;
         }
     }

@@ -17,6 +17,7 @@ namespace OmidProject.Infrastructures.CommandDb.EntitiesConfiguration.General
                 .WithMany(x => x.Advertisements)
                 .HasForeignKey(x => x.DistrictId)
                 .OnDelete(DeleteBehavior.NoAction);
+
             builder.HasOne(x => x.Category)
                 .WithMany(x => x.Advertisements)
                 .HasForeignKey(x => x.CategoryId)
