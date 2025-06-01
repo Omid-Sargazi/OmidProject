@@ -8,5 +8,5 @@ namespace OmidProject.Applications.Application.CityHandlers.CommandHandlers.Exce
 
 public sealed class CityNotExistException : BusinessException
 {
-        
+
 }

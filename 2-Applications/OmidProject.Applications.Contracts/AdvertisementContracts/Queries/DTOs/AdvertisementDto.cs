@@ -1,4 +1,6 @@
-﻿namespace OmidProject.Applications.Contracts.AdvertisementContracts.Queries.DTOs;
+﻿using OmidProject.Applications.Contracts.CategoryContracts.Queries.DTOs;
+
+namespace OmidProject.Applications.Contracts.AdvertisementContracts.Queries.DTOs;
 
 public class AdvertisementDto
 {
@@ -10,4 +12,7 @@ public class AdvertisementDto
     public string DistrictName { get; set; }
     public int CategoryId { get; set; }
     public string CategoryName { get; set; }
+    public CategoryDto Category { get; set; }
+
+    public List<Guid> ImageIds { get; set; }
 }

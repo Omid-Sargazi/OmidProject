@@ -3,12 +3,12 @@ using OmidProject.Frameworks.Contracts.Abstracts.ExceptionStructureMessages;
 
 namespace OmidProject.Applications.Application.ProvinceHandlers.CommandHandlers.Exceptions;
 
-public sealed class ProvinceNameIsExistException : BusinessException
+public sealed class ProvinceIdIsGreaterThan : BusinessException
 {
-    public ProvinceNameIsExistException()
+    public ProvinceIdIsGreaterThan()
         : base(ExceptionCodes.ProvinceException.ProvinceNameIsExist)
     {
     }
 
-    public override string Message => "نام استان تکراری می باشد!";
+    public override string Message => "آیدی استان نمیتواند بزرگتر از 33 باشد.!";
 }
