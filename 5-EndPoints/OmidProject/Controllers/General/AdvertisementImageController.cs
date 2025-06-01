@@ -13,7 +13,7 @@ namespace OmidProject.Host.Controllers.General
         {
         }
 
-        [HttpPost("create-advertisementImage")]
+        [HttpPost("create-advertisement-image")]
         public async Task<IActionResult> CreateAdvertisementImage(CreateAdvertisementImageCommand command,
             CancellationToken cancellationToken)
         {
@@ -27,7 +27,7 @@ namespace OmidProject.Host.Controllers.General
             CancellationToken cancellationToken)
         {
             var result =
-                await Distributor.PullQuery<GetAllImagesOfAdvertisementQuery, GetAllAdvertisementImageQueryResponse>(query,
+                await Distributor.PullQuery<GetAllImagesOfAdvertisementQuery, GetAllImagesOfAdvertisementQueryResponse>(query,
                     cancellationToken);
             return OkApiResult(result);
         }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OmidProject.Applications.Application.AdvertisementImageHandlers.CommandHandlers
 {
-    public class CreateAdvertisementImageCommandHandler : CommandHandlers<>
+    public class CreateAdvertisementImageCommandHandler 
     {
     }
 }

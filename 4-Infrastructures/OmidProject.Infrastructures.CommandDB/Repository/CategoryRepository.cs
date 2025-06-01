@@ -67,7 +67,10 @@ namespace OmidProject.Infrastructures.CommandDb.Repository
 
         public async Task<List<Category>> GetAllAsync()
         {
-            var result = await _Db.Categories.ToListAsync();
+            var result = await _Db.Categories
+                .Include(x=>x.Parent)
+                .Include(x=>x.Child)
+                .ToListAsync();
             return result;
         }
     }

@@ -8,4 +8,6 @@ public interface ICategoryService : IService
 {
     CategoryDto ConvertTo(Category category);
     List<CategoryDto> ConvertTo(List<Category> categories);
+
+    List<CategoryDto> GenerateTree(List<Category> categories);
 }
