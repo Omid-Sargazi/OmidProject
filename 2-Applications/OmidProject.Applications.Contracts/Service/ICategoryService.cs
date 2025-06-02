@@ -10,4 +10,6 @@ public interface ICategoryService : IService
     List<CategoryDto> ConvertTo(List<Category> categories);
 
     List<CategoryDto> GenerateTree(List<Category> categories);
+    List<CategoryDto> GenerateTreeUpToDown(List<Category> categories);
+    List<CategoryDto> GenerateTreeDownToUp(List<Category> categories);
 }

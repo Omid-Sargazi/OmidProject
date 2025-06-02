@@ -21,7 +21,10 @@ public class GetAllCategoriesQueryHandler : IQueryHandler<GetAllCategoriesQuery,
     {
         var categories = await _categoryRepository.GetAllAsync();
         var result = new GetAllCategoriesQueryResponse();
-        result.Items = _categoryService.GenerateTree(categories);
+        result.Items = 
+            query.Direction == 1 ? _categoryService.GenerateTreeUpToDown(categories) :
+            query.Direction == 2 ? _categoryService.GenerateTreeDownToUp(categories) :
+            _categoryService.GenerateTree(categories);
         return result;
     }
 }

@@ -44,4 +44,29 @@ public class CategoryService : ICategoryService
 
         return result;
     }
+    public List<CategoryDto> GenerateTreeUpToDown(List<Category> categories)
+    {
+        var temps = ConvertTo(categories);
+
+        // دیکشنری برای دسترسی سریع بر اساس Id
+        var dtoLookup = temps.ToDictionary(c => c.Id);
+
+        foreach (var temp in temps)
+        {
+            if(temp.ParentId.HasValue && dtoLookup.ContainsKey(temp.ParentId.Value))
+                dtoLookup[temp.ParentId.Value].Child.Add(temp);
+        }
+
+        var result = dtoLookup
+            .Where(x => x.Value.ParentId == null)
+            .Select(x=>x.Value)
+            .ToList();
+
+        return result;
+    }
+
+    public List<CategoryDto> GenerateTreeDownToUp(List<Category> categories)
+    {
+        return GenerateTree(categories);
+    }
 }

@@ -5,6 +5,7 @@ namespace OmidProject.Applications.Contracts.CategoryContracts.Queries;
 
 public class GetAllCategoriesQuery : Query
 {
+    public int Direction { get; set; }
 }
 
 public class GetAllCategoriesQueryResponse : QueryResponse

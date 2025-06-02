@@ -1,11 +1,13 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using OmidProject.Applications.Contracts.CategoryContracts.Queries;
 using OmidProject.Frameworks.Contracts.Markers;
 
 namespace OmidProject.Host.Controllers.General;
 
+[AllowAnonymous]
 public class CategoryController:MainController
 {
     public CategoryController(IDistributor distributor) : base(distributor)
